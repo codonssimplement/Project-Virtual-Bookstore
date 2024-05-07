@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Project | Virtual Bookstore</title>
+</head>
+<body>
+    <!-- MAIN CONTAINER -->
+   <div class="main-container">
+
+        <!-- LOGO COMPAGNY -->
+        <div class="logo">
+            <h1>LIBRARY </h1><img src=" images/logo-compagny.png" alt="logo-compagny" class="logo-compagny">
+        </div>
+
+        <!-- COMPAGNY DESCRIPTION -->
+        <div class="compagy-decription-">
+            <h2>Welcome to the xarala virtual bookstore</h2>
+            <p>Let's GO !</p>
+        </div>
+
+        <!-- ADD BOOK BUTTON -->
+        <button id="add-book-btn" class="btn-add-book"> ADD BOOK</button>
+
+        <!-- ADD BOOK MODAL FORM -->
+        <form id="modal-form-add-book">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+               <h6>ADDING BOOK</h6>
+              <input type="text" id="title" placeholder="Title of the book">
+              <input type="text" id="author" placeholder="Author of the book">
+              <button id="save-book-btn">Save it</button>
+            </div>
+        </form>
+        <!-- BOOKS LIST -->
+        <div id="all-books"></div>
+   </div>
+</body>
+</html>
