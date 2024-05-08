@@ -19,23 +19,24 @@
         <div class="compagy-decription">
             <h2>Welcome to the xarala virtual bookstore</h2><p>Let's GO !</p>
             <!-- ADD BOOK BUTTON -->
-        <button id="add-book-btn" class="btn-add-book"> ADD BOOK</button>
+        <button id="add-book-btn" class="btn-add-book" type="button"> ADD BOOK</button>
         </div>
 
        
 
         <!-- ADD BOOK MODAL FORM -->
-        <form id="modal-form-add-book">
+        <form id="modal-form-add-book" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close-modal">&times;</span>
                <h6>ADDING BOOK</h6>
               <input type="text" id="title" placeholder="Title of the book">
               <input type="text" id="author" placeholder="Author of the book">
-              <button id="save-book-btn">Save it</button>
+              <button id="save-book-btn" >Save it</button>
             </div>
         </form>
         <!-- BOOKS LIST -->
         <div id="all-books"></div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
