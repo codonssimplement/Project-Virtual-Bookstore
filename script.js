@@ -15,6 +15,7 @@ const $saveBook = document.getElementById("save-book-btn");
 const $allBooks = document.getElementById("all-books");
 
 
+
   
   let books = JSON.parse(localStorage.getItem("books")) || [];
 
@@ -23,6 +24,10 @@ const $allBooks = document.getElementById("all-books");
 FUNCTIONS
 
 */
+//Function Show ID
+// const showID = () => {
+//   $showId.style.display = $showId.style.display ==="block" ? "none" : "block";
+// }
 
 //Function toggle modal
 const toggleModal = () => {
@@ -57,17 +62,25 @@ const renderBookList = ()  => {
       const bookItem = document.createElement("div");
       bookItem.innerHTML = `
         <div class="book" data-id="${id}">
-        <p>BookId: ${id}</p>
           <h4 ${read ? 'class="read"' : ''}>Title: ${title}</h4>
-          <h4>Author: ${author}</h4>
-          <button class="read-btn">${read ? "unread" : "read"}</button>
+          <h4 >Author: ${author}</h4>
+          <button class="read-btn">${read ? "Unread" : "Read"}</button>
+          <button id="showIds" class="showId-btn">ShowID</button>
           <button class="delete-btn">Delete</button>
-        </div>
-      `;
+          </div>
+          `;
+          
+         
+          
       $allBooks.appendChild(bookItem);
     });
   }
 
+  // Function to display the book ID in alert
+  const showBookId = (e) => {
+    const bookId = e.target.closest(".book").dataset.id;
+    alert(`Book ID: ${bookId}`);
+  }
   
   // Function to switch the reading state of a book
   function toggleReadStatus(bookId) {
@@ -75,7 +88,10 @@ const renderBookList = ()  => {
     books[bookIndex].read = !books[bookIndex].read;
     localStorage.setItem("books", JSON.stringify(books));
     renderBookList();
+
   }
+
+
 
   // Function to remove a book from the list
   function deleteBook(bookId) {
@@ -97,6 +113,7 @@ $addBook.addEventListener("click", toggleModal);
 $saveBook.addEventListener("click", saveBook);
 // Closing the add book modal
 $closeModal.addEventListener("click", toggleModal);
+// Show  Alert ID
 
 // Managing actions on books in the list
 $allBooks.addEventListener("click", e => {
@@ -113,6 +130,8 @@ $allBooks.addEventListener("click", e => {
     } else if (target.classList.contains("delete-btn")) {
       
       deleteBook(bookId);
+    }else if (target.classList.contains("showId-btn")){
+      showBookId(e);
     }
   });
 

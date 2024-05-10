@@ -93,8 +93,13 @@ p{
   .book h4.read {
 
     text-decoration: line-through;
-    text-decoration-color: rgb(255,127,42);
-    text-decoration-style:double;
+    text-decoration-color: rgb(253, 7, 7);
+    text-decoration-style:wavy;
+   
+  }
+  h4{
+    font-size: 20px;
+    color: black;
   }
   
   .book h4.read-btn:hover {
@@ -112,8 +117,61 @@ p{
     border-width: 2px;
   }
   .book{
+    background-image: linear-gradient(rgba(230, 212, 201, 0.65), rgba(255, 146, 79, 0.55));
+    color: white;
+    font-weight: bolder;
+    width: auto;
+    height: auto;
     text-align: center;
+    margin: 10px;
+   
   }
+  #all-books{
+    display: grid;
+    grid: auto-flow / 1fr 1fr 1fr;
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 2%;
+    
+
+  }
+  
   .book p{
     font-size: 15px;
   }
+  button{
+    color: black;
+    font-weight: bolder;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 60px;
+    color: var(--dark-white);
+    background-color: var(--golden-yellow);
+    background-image: linear-gradient(rgba(255,127,42,0.9), rgba(255,127,42,0.5));
+    border-color: var(--golden-yellow);
+    border-width: 3px;
+
+  }
+  .delete-btn{
+    background-image: linear-gradient(rgba(247, 13, 13, 0.9), rgba(148, 33, 25, 0.5));
+   
+  }
+  .showId-btn{
+    background-image: linear-gradient(rgba(12, 129, 8, 0.986), rgba(8, 90, 8, 0.5));
+  }
+  .footer-copyright {
+    background-color: rgba(255, 255, 255, 0.726);
+    border: rgba(255, 255, 255, 0.911);
+    width: 70%;
+    margin-left: 14.5%;
+    text-align: center;
+    margin-top: 23%;
+
+   
+
+}
+.footer-copyright  p{
+  background-color: var(--golden-yellow);
+  background-image: linear-gradient(rgba(245, 245, 245, 0.486), rgba(219, 219, 218, 0.274));
+  color: rgba(255, 127, 42, 0.479);
+}
