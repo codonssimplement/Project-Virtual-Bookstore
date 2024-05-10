@@ -3,4 +3,4 @@ In this project we have set up a simple virtual bookstore where books are added,
 ## For clone this project do 
 git clone https://github.com/codonssimplement/Project-Virtual-Bookstore.git
 ### Link online website  
-https://bookstore-murex.vercel.app/
+https://bookstores-taupe.vercel.app/
